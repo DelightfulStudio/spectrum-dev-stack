@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  rethinkdb:
+    image: rethinkdb
+    container_name: spectrum-rethinkdb
+    volumes:
+      - rethinkdb:/data
+    ports:
+      - "28015:28015"
+      - "29015:29015"
+      - "8080:8080"
+
+  redis:
+    image: redis
+    container_name: spectrum-redis
+    volumes:
+      - redis:/data
+    ports:
+      - "6379:6379"
+
+volumes:
+    rethinkdb:
+    redis:
