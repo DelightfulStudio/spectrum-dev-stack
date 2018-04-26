@@ -6,9 +6,9 @@ This stack eliminates the need to manually install Spectrum's background service
 
 ### First time setup
 
-Follow the original Spectrum [instructions](https://github.com/withspectrum/spectrum#first-time-setup), but skip steps for **RethinkDB** and **Redis** in the Installation section. Once you have `yarn` installed, clone this repo, make sure your [Docker app](https://store.docker.com/search?type=edition&offering=community) is running, `cd spectrum-dev-stack` and run `yarn start`. It's going to take a couple of minutes for the `yarn` script to set things up for the first time.
+Follow the original Spectrum [instructions](https://github.com/withspectrum/spectrum#first-time-setup), but skip the steps for **RethinkDB** and **Redis** in the Installation section. Once you have `yarn` installed, clone this repo, make sure your [Docker app](https://store.docker.com/search?type=edition&offering=community) is running, `cd spectrum-dev-stack` and run `yarn start`. It's going to take a couple of minutes for the `yarn` script to set things up for the first time.
 
-Once `yarn start` has completed successfully, **RethinkDB** and **Redis** will be up and running (inside of a docker container), and you won't need to start them manually, so you can skip those steps in the rest of the [original instructions](https://github.com/withspectrum/spectrum#installation).
+Once `yarn start` has completed successfully, **RethinkDB** and **Redis** will be up and running (each inside of a corresponding docker container), and you won't need to start them manually, so you can skip those steps in the rest of the [original instructions](https://github.com/withspectrum/spectrum#installation).
 
 ### Restarting background services
 
@@ -22,4 +22,4 @@ The full list of available commands for managing the services:
 
 * `yarn start` — creates (if needed) and starts the services' containers; the containers will run until stopped or Docker is restarted
 * `yarn stop` — stops the containers
-* `yarn down` — deletes the containers; persistent volumes used by the containers will stay around until manually deleted with `docker volume rm spectrum_rethinkdb spectrum_redis` or `docker volume prune` commands
+* `yarn down` — deletes the services' containers; persistent volumes used by the containers will stay around until manually deleted with `docker volume rm spectrum_rethinkdb spectrum_redis` or `docker volume prune` commands
