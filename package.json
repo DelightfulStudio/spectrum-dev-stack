@@ -1,9 +1,8 @@
 {
   "name": "spectrum-dev-stack",
   "version": "0.0.1",
-  "description": "Docker stack for Spectrum's 3rd party backend services",
+  "description": "Docker stack for Spectrum's background services",
   "repository": "https://github.com/DelightfulStudio/spectrum-dev-stack",
-  "author": "Delightful Studio",
   "license": "MIT",
   "scripts": {
     "start": "docker-compose -p spectrum up -d",
