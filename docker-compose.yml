@@ -14,11 +14,8 @@ services:
   redis:
     image: redis
     container_name: spectrum-redis
-    volumes:
-      - redis:/data
     ports:
       - "6379:6379"
 
 volumes:
     rethinkdb:
-    redis:
